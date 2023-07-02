@@ -1,0 +1,34 @@
+.course_types_second{
+  display: flex;
+  background: #F4F5F7;
+  padding-top: 100px;
+
+    &_row{
+      @include flex(center,space-between);
+      gap: 700px;
+
+      &_button{
+        display: flex;
+        gap: 50px;
+        border: none;
+        fill: white;
+
+
+        &_icon{
+          fill: black;
+        }
+
+      }
+
+      &_button{
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        fill: $primary;
+        border: none;
+      }
+    }
+
+  
+
+}
