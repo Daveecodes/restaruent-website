@@ -1,222 +1,58 @@
 .banner{
     position: relative;
-    padding-bottom: 70px;
-    
-    &_button_button{
-        @media screen and (max-width:980px) {
-            display: block;
-         }
-    }
+    top: 180px;
 
-    &_image svg{
-        @include adaptive-value('width',602,150);
 
-        @media screen and (max-width:980px) {
-            @include flex(center,center);
-           }
-    }
-
-    &::before{
-        content: '';
-        position: absolute;
-        top: -80px;
-        left: 0;
-        background-color:$primary;
-        width: 100%;
-        height: calc(100% + 80px);
-        opacity: 0.2;
-        z-index: 1;
-    }
-    .container{
-        position: relative;
-        z-index: 2;
-    }
-    &_text{
-        font-weight: 900;
-        line-height: 180%;
-        @include adaptive-value('font-size',54,24)
-    }
     &_row{
-       @include flex(unset, space-between);
-       padding-top: 160px;
+        @include flex(start,space-between);
+        gap: 31px;
 
-       @media screen and (max-width:1260px) {
-        flex-direction: column;
-        gap: 50px;
-       }
-    }
-    &_button{
-        position: relative;
-        @include flex(center,unset);
-        border: none;
-        background-color: transparent;
-        color:#1E212C;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 150%;
-        gap: 50px;
-        margin-left: 30px;
-
-
-        &::before{
-            content: '';
-            position: absolute;
-            width: 52px;
-            height: 52px;
-            border-radius: 50%;
-            background-color: $primary;
-            top: -17px;
-            left: -21px;
-            transform: translate(-30% -30%);
-            z-index: -1;
-
+        @include media(1120){
+            flex-direction: column;
+            flex: 1 1 auto;
         }
-        &:hover{
-            &::after{
-                content: '';
-                position: absolute;
-                width: 82px;
-                height: 82px;
-                border-radius: 50%;
-                background-color: $primary;
-                top: -32px;
-                left:-36px;
-                transform: translate(-50% -50%);
-                opacity: 0.4;
-                z-index: -1;
-            }
-        } 
-    }
-    &_content{
-        display: flex;
-        flex-direction: column;
-        gap:140px;
 
-        @media screen and (max-width:980px) {
+    }
+
+    &_panel{
+        @include flex(center,center);
+        flex-direction: column;
+        gap: 20px;
+        background: #FFF;
+        box-shadow: 10px 10px 40px 20px rgba(0, 0, 0, 0.10);
+        padding: 40px;
+
+
+        &_title{
+            color: #2C2C2C;
+            font-size: 26px;
+            font-family: $mainT2;
+            font-weight: 400;
+
+            
+           @include media(375){
             text-align: center;
            }
-
-       
-        &_buttons{
-            position: relative;
-            display: flex;
-            gap: 25px;
-            color: $primary;
-
-
-            @media screen and (max-width:980px) {
-                @include flex(center,center);
-               }
-
-
         }
-        &_button{
-           padding: 15px 33px;
-           background-color: transparent;
-           border: 2px solid $primary;
-           border-radius: 4px;
-           opacity: 1;
-           color: $primary;
-           transition: all 0.2s ease-in-out;
-           @include adaptive-value('padding-top',15,8);
-           @include adaptive-value('padding-bottom',15,8);
-           @include adaptive-value('padding-left',33,13);
-           @include adaptive-value('padding-right',33,13);
 
-           &_button{
-            @media screen and (max-width:980px) {
-                display: block;
-             }
-           }
-           
 
-           &:hover{
-            background-color: $primary;
-            color: $white;
-           }
-           
+        &_subtitle{
+            color: #656363;
+            text-align: center;
+            font-size: 26px;
+            font-family: $mainT2;
+            font-weight: 400;
+            line-height: 26px;
         }
-        
+
+
         
     }
+
+    &_marked{
+        color: #BC9060;
+    }
+
 }
-
-.info{
-    &_banner{
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 165px;
-
-        @media screen and (max-width:1260px) {
-            flex-direction: column;
-            &:not(:last-child){
-                padding-right: 66px;
-                margin-right: 66px;
-            }
-            &::before{
-                position: absolute;
-                content: '';
-                right: 0;
-                width:8px ;
-                height: 8px;
-                border-radius: 50%;
-                // background-color: $primary;
-            }
-           }
-
-    }
-    &_card{
-        @include flex(center, unset);
-        gap:12px;
-        position: relative;
-       
-        &:not(:last-child){
-            padding-right: 66px;
-            margin-right: 66px;
-
-           
-        }
-        &:not(:last-child):before{
-            position: absolute;
-            content: '';
-            right: 0;
-            width:8px ;
-            height: 8px;
-            border-radius: 50%;
-            background-color: $primary;
-        }
-        
-        @media screen and (max-width:1260px) {
-            &{
-                padding-right: 66px;
-                margin-right: 66px;
-            }
-            &::before{
-                position: absolute;
-                content: '';
-                right: 0;
-                width:8px ;
-                height: 8px;
-                border-radius: 50%;
-                background-color: $primary;
-            }
-           }
-    }
-    &_number{
-        font-weight: 900;
-        font-size: 46px;
-        line-height: 130%;
-        color: #1E212C;
-        @include adaptive-value('font-size',46,12)
-    }
-    &_text{
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 160%;
-        color: #1E212C;
-        @include adaptive-value('font-size',16,4)
-    }
-
-    }
 
 
