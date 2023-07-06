@@ -53,6 +53,12 @@
         background-color:#FF7400;
         border: none;
 
+        &_button{
+            background-color: #D67E34;
+            padding: 14px 68px;
+            box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+        }
+
         @include media(770){
             margin-bottom: 25px;
         }

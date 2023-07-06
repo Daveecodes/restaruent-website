@@ -288,6 +288,7 @@ html, body {
   }
 }
 .banner_panel {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: start;
@@ -315,6 +316,15 @@ html, body {
   font-family: Tinos, sans-serif;
   font-weight: 400;
   line-height: 26px;
+}
+.banner_panel_subtitle_sub {
+  color: #000;
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 .banner_marked {
   color: #BC9060;
@@ -490,6 +500,11 @@ html, body {
   background-color: #FF7400;
   border: none;
 }
+.order_button_button {
+  background-color: #D67E34;
+  padding: 14px 68px;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+}
 @media screen and (max-width: 770px) {
   .order_button {
     margin-bottom: 25px;
@@ -524,6 +539,10 @@ html, body {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.cheff_title_title {
+  color: #fff;
+  padding-bottom: 50px;
 }
 
 .dishes {
@@ -657,6 +676,7 @@ html, body {
 
 .menu {
   margin-bottom: 100px;
+  margin-top: 100px;
 }
 .menu_row {
   display: flex;
@@ -727,6 +747,69 @@ html, body {
   color: #000;
   font-family: Tinos;
   font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.food {
+  position: relative;
+  background-image: url(/images/bar-1869656_1920\ 2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+.food_row {
+  position: relative;
+  padding: 100px 0;
+}
+.food_image {
+  position: relative;
+  width: 231px;
+  height: 231px;
+  border-radius: 50%;
+  background-image: url(/images/abstract-1238247_1920\ 1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 40px;
+}
+.food_rec {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 124px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #D67E34;
+}
+.food_rec_text {
+  color: #000;
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.food_sign {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  background-color: #D67E34;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.food_sign_text {
+  color: #FFF;
+  font-family: Cookie;
+  font-size: 30px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;

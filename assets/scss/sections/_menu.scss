@@ -1,5 +1,6 @@
 .menu{
     margin-bottom: 100px;
+    margin-top: 100px;
 
     &_row{
         @include flex(center,center);
