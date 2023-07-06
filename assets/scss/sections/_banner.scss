@@ -1,21 +1,25 @@
 .banner{
     position: relative;
-    top: 180px;
-
+    
 
     &_row{
         @include flex(start,space-between);
         gap: 31px;
+        transform: translateY(-30%);
 
         @include media(1120){
-            flex-direction: column;
-            flex: 1 1 auto;
+        transform: translateY(-10%);
+
+        }
+
+        @include media(1120){
+            flex-wrap: wrap;
         }
 
     }
 
     &_panel{
-        @include flex(center,center);
+        @include flex(center,start);
         flex-direction: column;
         gap: 20px;
         background: #FFF;
@@ -51,6 +55,10 @@
 
     &_marked{
         color: #BC9060;
+
+        &_marked{
+            color: #d67e34;
+        }
     }
 
 }

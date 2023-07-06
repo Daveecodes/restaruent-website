@@ -1,5 +1,33 @@
 .header{
     position: relative;
+    min-height: 100vh;
+    // bottom: 0;
+    // background-image: url(/images/hero\ image.png);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // height: 100vh;
+
+    &_bg{ 
+        position:absolute; 
+        width: 100%; 
+        height: 100%; 
+        top: 0; 
+        left: 0; 
+        z-index: -1;
+    } 
+ 
+    &_image{ 
+        width: 100%; 
+        height: 100%; 
+ 
+        & img{ 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+        } 
+ 
+    }
+
 
     &_info{
         @include flex(center,space-between);
@@ -60,27 +88,7 @@
         }
     }
 
-    
-    &_bg{
-        position:absolute;
-        width: 100%;
-        height: 100vh;
-        
-        z-index: -1;
-        
-    }
 
-    &_image{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-
-        & img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
 
     &_desc{
         @include flex(center,start);
@@ -116,7 +124,7 @@
         flex:  1 1 auto;
         @include flex(start,center);
         flex-direction: column;
-        margin-top: 300px;
+        margin-top: 30%;
 
         @include media(1000){
             @include flex(center,center);
@@ -210,11 +218,10 @@
             padding: 14px 19px;
             background-color:#FF7400;
             border: none;
-            
+
         }
 
         &_con{
-
 
             @include media(940){
                 display:none;
