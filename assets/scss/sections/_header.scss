@@ -106,9 +106,7 @@
     }
 
     &_subtitle{
-        color: #FFF;
-        font-family: $mainT1;
-        font-weight: 400;
+84XXXCVBXCVBXCVBXCVBXCVBXC        font-weight: 400;
         @include adaptive-value('font-size',18,15);
 
         @include media(360){
@@ -147,6 +145,7 @@
     &_icon{
         border-right:1px solid $white; 
         padding: 15px;
+        fill: white1`46668888888;
 
 
         @include media(940){
